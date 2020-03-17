@@ -1,54 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>11th Team's Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form action="info.php" method="post">
-        <h1>Fill in this form!</h1>
-        <br>
-        Your name*:
-        <input type="text" name="name" placeholder="Press your name here" required>
-        <br><br>
-        Class*:
-        <input type="text" name="class" placeholder="Press your class here" required>
-        <br><br>
-        University*:
-        <input type="text" name="university" placeholder="Press your university here" required>
-        <br><br>
-        Your hobbies are:
-        <br>
-        <label for="hob1">
-            <input type="checkbox" name="hob1" id="hob1" value="Football">Play football
-        </label>
-        <br><br>
-        <label for="hob2">
-            <input type="checkbox" name="hob2" id="hob2" value="Fix bug">Listen to music
-        </label>
-        <br><br>
-        <label for="hob3">
-            <input type="checkbox" name="hob3" id="hob3" value="Play game">Play games
-        </label>
-        <br><br>
-        <input type="text" name="other" placeholder="Other..." style="border: none; border-bottom: 1px solid #111;">
-        <br><br>
-        May be contact you?
-        <label for="yes">
-            <input type="radio" name="contact" id="yes" value="Yes" > Yes
-        </label>
-        <label for="no">
-            <input type="radio" name="contact" id="no" value="No" > No
-        </label>
-        <br>
-        <small><i>Default is YES!</i></small>
-        <br> <br><hr style="width: 20%; margin: 0px;"> <br>
-        <input type="submit" title="Click to submit"></input>
-        <input type="reset" title="Click to reset"></input>
-    </form>
+    <div class="testbox">
+        <form action="info.php" method="POST">
+            <h1>Fill in this form</h1>
+            <div class="item">
+                <p>Your name</p>
+                <div>
+                    <input type="text" name="name" placeholder="Enter your name here!" required/>
+                </div>
+            </div>
+            <div class="item">
+                <p>Your email</p>
+                <input type="text" name="email" placeholder="Enter your email here!" required/>
+            </div>
+            <div class="item">
+                <p>Date of Birth</p>
+                <input type="date" name="birth" required min="1975-01-01" max="2050-12-31"/>
+            </div>
+            <div class="item">
+                <p>Your Class</p>
+                <input type="text" name="class" placeholder="Enter your class here!" required/>
+            </div>
+            <div class="item">
+                Your university
+                <input type="text" name="university" placeholder="Enter your university here!" required/>
+            </div>
+            <div class="item">
+                <p>Your Sex</p>
+                <select nane="sex" required>
+                    <option value="">*Please select*</option>
+                    <option value="A">Male</option>
+                    <option value="B">Female</option>
+                    <option value="C">Other</option>
+                </select>
+            </div>
+            <div class="item hobby">
+                <p>Your hobbies</p>
+                <label for="hob1">
+                    Play football
+                    <input type="checkbox" name="hob1" id="hob1" value="Football">
+                </label>
+                <label for="hob2">
+                    Listen to music
+                    <input type="checkbox" name="hob2" id="hob2" value="Fix bug">
+                </label>
+                <label for="hob3">
+                    Play games
+                    <input type="checkbox" name="hob3" id="hob3" value="Play game">
+                </label>
+                <br>
+                <input class="other_hobby" type="text" name="other" placeholder="Other...">
+            </div>
+            <div class="item">
+                <p>Opinions</p>
+                <textarea rows="5" placeholder="If you don't have any opinions, this area will be empty!"></textarea>
+            </div>
+            <div class="btn-block">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
