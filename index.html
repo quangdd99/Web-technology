@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="info.php" method="post">
+        <h1>Fill in this form!</h1>
+        <br>
+        Your name*:
+        <input type="text" name="name" placeholder="Press your name here" required>
+        <br><br>
+        Class*:
+        <input type="text" name="class" placeholder="Press your class here" required>
+        <br><br>
+        University*:
+        <input type="text" name="university" placeholder="Press your university here" required>
+        <br><br>
+        Your hobbies are:
+        <br>
+        <label for="hob1">
+            <input type="checkbox" name="hob1" id="hob1" value="Football">Play football
+        </label>
+        <br><br>
+        <label for="hob2">
+            <input type="checkbox" name="hob2" id="hob2" value="Fix bug">Listen to music
+        </label>
+        <br><br>
+        <label for="hob3">
+            <input type="checkbox" name="hob3" id="hob3" value="Play game">Play games
+        </label>
+        <br><br>
+        <input type="text" name="other" placeholder="Other..." style="border: none; border-bottom: 1px solid #111;">
+        <br><br>
+        May be contact you?
+        <label for="yes">
+            <input type="radio" name="contact" id="yes" value="Yes" > Yes
+        </label>
+        <label for="no">
+            <input type="radio" name="contact" id="no" value="No" > No
+        </label>
+        <br>
+        <small><i>Default is YES!</i></small>
+        <br> <br><hr style="width: 20%; margin: 0px;"> <br>
+        <input type="submit" title="Click to submit"></input>
+        <input type="reset" title="Click to reset"></input>
+    </form>
+</body>
+
+</html>
