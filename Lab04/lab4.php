@@ -151,7 +151,7 @@
                 }
                 echo '</table>';
                 // print_r($info);
-                // sort($info);
+                sort($info);
                 ?>
                 <br>
                 <strong>Sau khi sắp xếp theo tên:</strong>
