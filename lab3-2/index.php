@@ -3,10 +3,10 @@
         $num=$_POST['num'];
         $typenum=$_POST['typenum'];
         if($typenum==1){
-            $message=$num."degrees = ".$num." radians";
+            $message=$num."degrees = ".($num*6.18/180)." radians";
         }
         else if($typenum==2){
-            $message=$num." radians = ".$num." degrees";
+            $message=$num." radians = ".($num*180/6)." degrees";
         }
         else{
             $message="Please enter again because of errors encounter!";
@@ -36,10 +36,10 @@
         $typenum=$_POST['typenum'];
         $message="Please enter Data!";
         if($typenum==1){
-            $message=$num."degrees = ".$num." radians";
+            $message=$num."degrees = ".($num*6.18/180)." radians";
         }
         else if($typenum==2){
-            $message=$num." radians = ".$num." degrees";
+            $message=$num." radians = ".($num*180/6.18)." degrees";
         }
         else{
             $message="Please enter again because of errors encounter!";
