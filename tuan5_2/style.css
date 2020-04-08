@@ -1,0 +1,44 @@
+siness-top-page{
+    width: 100%;
+    line-height: auto;
+}
+
+.Business-top-page b{
+    font-size: 50px;
+    
+}
+
+.page{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.left-page{
+    display: grid;
+    line-height: 30px;
+    width: 30%;
+    margin-top: 30px;
+    margin-right: 10%;
+
+}
+
+.left-page select{
+    height: 100px;
+}
+
+.right-page{
+    margin-top: 30px;
+    width: 40%;
+}
+
+.right-page table{
+    margin: 0px;
+    width: 100%;
+    line-height: 30px;
+}
+
+
+
+.right-page input{
+    width: 100%;
+}
