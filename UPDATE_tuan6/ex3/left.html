@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>LEFT</title>
+    <script type = "text/javascript">
+        function validateForm() {
+            if( document.myform.blog.value === "" ) {
+                alert("Enter some value!");
+                return;
+            }
+            var d = new Date();
+            d.setTime(d.getTime() + (1*24*60*60*1000));
+            var expires = "expires=" + d.toGMTString();
+            cookievalue = escape(document.myform.blog.value);
+            
+            // cookievalue = document.myform.blog.value;
+            document.cookie = "cblog=" + cookievalue + ";" + expires;
+            document.getElementById("content").innerHTML = "Setting Cookies : " + "cblog =" + cookievalue ;
+        }
+    </script>   
+</head>
+
+<body  align="center">
+    <h1>Enter your favorite blog</h1>
+    <form action="" name = "myform" >
+        <input type="text" name="blog" placeholder="Enter your favorite blog" />
+        <input type="button" value="submit" onclick = "validateForm()"/>
+    </form>
+    <br>
+    <div id="content"></div>
+
+</body>
+
+</html>

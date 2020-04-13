@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIGHT</title>
+    <link rel="stylesheet" href="index.css">
+    <script type = "text/javascript">
+        function ReadCookie() {
+            var allcookies = document.cookie;
+            
+            // Get all the cookies pairs in an array
+            cookiearray = allcookies.split(';');
+            for(var i=0; i<cookiearray.length; i++) {
+                name = cookiearray[i].split('=')[0];
+                value = cookiearray[i].split('=')[1];
+                console.log(name);
+                if( name === "cblog"){
+                    document.getElementById("content").innerHTML = (value);
+                }
+            }
+            
+        }
+     </script>
+</head>
+<body align="center" onload="ReadCookie()" >
+    <h1>Your favorite blog</h1>
+    <input type="button" onclick="ReadCookie()" value="Click to refresh">
+    <h1 id="content"></h1>
+</body>
+</html>

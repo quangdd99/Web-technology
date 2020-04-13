@@ -1,0 +1,67 @@
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 50vw;
+    border-radius: 5px;
+    border: 1px solid #111;
+}
+
+.element{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+a:hover{
+    transform: translateX(10px);
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.pa {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.red{
+    color: red;
+}
+
+.blue{
+    color: blue;
+}
+
+.green{
+    color: green;
+}
+
+.yellow{
+    color: yellow;
+}
+
+.pink {
+    color: pink;
+}
+
+.gold{
+    color: gold;
+}
+
+.brown{
+    color: brown;
+}
+
+.tomato{
+    color: tomato;
+}
