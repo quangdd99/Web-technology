@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="main_page">
+        <h1>LOGIN FORM</h1>
+        <form action="login.php" method="POST">
+            <table>
+                <tr>
+                    <td>
+                        Username(*) :
+                    </td>
+                    <td>
+                        <input type="text" name="username" id="username" >
+                    </td>
+                    <td id="user_check" class="warning">
+    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Telephone(*) :
+                    </td>
+                    <td>
+                        <input type="text" name="tel" id="tel" >
+                    </td>
+                    <td id="tel_check" class="warning">
+    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email(*) :
+                    </td>
+                    <td>
+                        <input type="text" name="mail" id="mail" >
+                    </td>
+                    <td id="mail_check" class="warning">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" id="submit" value="submit">
+            <input type="reset" value="Reset">
+            <p id="submit_check"></p>
+        </form>
+        <script src="usercheck.js"></script>
+    </div>    
+</body>
+</html>
