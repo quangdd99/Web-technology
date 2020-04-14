@@ -4,6 +4,7 @@ class user_configuration{
         this.mail=document.getElementById("mail");
         this.tel=document.getElementById("tel");
         this.submit=document.getElementById("submit");
+        this.reset=document.getElementById("reset");
         this.check();
     }
 
@@ -37,7 +38,7 @@ class user_configuration{
     }
     
     userCheck(str){
-        var username_regex=/^[a-zA-Z0-9_-]{3,15}$/g;
+        var username_regex=/^[a-zA-Z0-9_]{3,15}$/g;
         if(username_regex.test(str)){
             document.getElementById("user_check").innerHTML="";
             return true;
@@ -49,10 +50,17 @@ class user_configuration{
     }
 
     submitCheck(){
-        if(this.userCheck(this.username.value)&&this.mailCheck(this.mail.value)&&this.telephoneCheck(this.tel.value)){
+        if(this.userCheck(this.username.value)&&this.telephoneCheck(this.tel.value)&&this.mailCheck(this.mail.value)){
             document.getElementById("submit_check").innerHTML="You've entered true value... coming soon...";
         }
         else document.getElementById("submit_check").innerHTML="Please enter value as true form";
+    }
+
+    resetForm(){
+        document.getElementById("submit_check").innerHTML="";
+        document.getElementById("user_check").innerHTML="";
+        document.getElementById("mail_check").innerHTML="";
+        document.getElementById("tel_check").innerHTML="";
     }
 
     check(){
@@ -60,7 +68,7 @@ class user_configuration{
         this.mail.addEventListener("keyup",()=>this.mailCheck(this.mail.value));
         this.tel.addEventListener("keyup",()=>this.telephoneCheck(this.tel.value));
         this.submit.addEventListener("mouseup",()=>this.submitCheck());
-
+        this.reset.addEventListener("mouseup",()=>this.resetForm());
     }
 
 }
